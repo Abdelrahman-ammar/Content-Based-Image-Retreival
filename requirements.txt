@@ -22,12 +22,8 @@ keras==2.12.0
 Keras-Preprocessing==1.1.2
 matplotlib==3.5.2
 numpy==1.23.1
-opencv-python==4.7.0.72
-pandas==2.1.3
 Pillow==9.2.0
 pipline==0.0
-scikit-learn==1.1.1
-sklearn==0.0
 streamlit==1.21.0
 tensorflow==2.12.0
 tensorboard==2.12.2
