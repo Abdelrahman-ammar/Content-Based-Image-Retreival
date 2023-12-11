@@ -24,7 +24,7 @@ The project is implemented on 2 techniques which is LSH (Locality Sensitive Hash
 - [FlowersRetreival](./FlowersRetreival.py/) : Project Version using LSH , contains also Functions and classes used in this project 
     - [Streamlit App](./streamlit_app.py) : Deployment using Streamlit and functions in the [FlowersRetreival](./FlowersRetreival.py)
 
-    -[LSH Notebook](./LastJupyter.ipynb) : Notebook contains the LSH functions and sequence of work
+    - [LSH Notebook](./LastJupyter.ipynb) : Notebook contains the LSH functions and sequence of work
 
 - [CBIR Annoy](./Annoy.ipynb) : Project Version using the Annoy library from Spotify 
 
