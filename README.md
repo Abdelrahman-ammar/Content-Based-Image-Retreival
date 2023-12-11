@@ -3,7 +3,7 @@
 
 * [What is this project](https://github.com/Abdelrahman-ammar/Content-Based-Image-Retreival/blob/master/README.md#What-is-this-project)
 
-
+* [Details](https://github.com/Abdelrahman-ammar/Content-Based-Image-Retreival/blob/master/README.md#Details)
 
 * [Project Structure](https://github.com/Abdelrahman-ammar/Content-Based-Image-Retreival/blob/master/README.md#Project-Structure)
 
