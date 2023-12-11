@@ -10,12 +10,22 @@ from PIL import Image
 
 model = GetModel()
 
-# with open('image_features.pkl', 'rb') as file:
-#     loaded_features = pickle.load(file)
+@st.cache(allow_output_mutation=True)
+def extract_features_and_build_tables(folder_name):
+    folder_path = f"{folder_name}/*"
+    dataset = file_pathss(folder_path)
 
-# with open('tables_data.pkl', 'rb') as file:
-#     loaded_tables = pickle.load(file)
+    with st.spinner("Extracting Features"):
+        images_ds = dataset.map(ResnetPreprocess)
+        images_ds = images_ds.batch(32)
+        features = model.predict(images_ds)
 
+        labels_ds = dataset.map(get_label)
+        labels = [label.numpy().decode('utf-8') for label in labels_ds]
+
+        tables = Build_tables(10, features[0].shape[0], 8, features, labels)
+
+    return features, labels, tables
 
 def folder_selector():
     st.sidebar.title("Select Folder")
@@ -30,23 +40,10 @@ def folder_selector():
 
 folder_name = folder_selector()
 
+features, labels, tables = None , None , None
 if folder_name:
-    folder_path = f"{folder_name}/*"
-    dataset = file_pathss(folder_path)
-    with st.spinner("Extracting Features"):
-        images_ds = dataset.map(ResnetPreprocess)
-        images_ds = images_ds.batch(32)
-
-        features = model.predict(images_ds)
-
-        labels_ds = dataset.map(get_label)
-        labels = []
-        for label in labels_ds:
-            labels.append(label.numpy().decode('utf-8'))
-        
-
-        tables = Build_tables(10,features[0].shape[0],8,features,labels)
-     
+    features, labels, tables = extract_features_and_build_tables(folder_name)
+       
 
 
 def file_selector():
