@@ -32,5 +32,5 @@ The project is implemented on 2 techniques which is LSH (Locality Sensitive Hash
 
 Both 2 techniques uses the Cosine Similarity as a metric of distance
 <br> 
- To use the GUI write in ```streamlit run streamlit_app.py```
+ To use the GUI write ```streamlit run streamlit_app.py``` in your terminal
 
