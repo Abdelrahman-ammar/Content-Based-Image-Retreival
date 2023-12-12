@@ -19,8 +19,6 @@ The project is implemented on 2 techniques which is LSH (Locality Sensitive Hash
 
 
 ## Project Structure 
-- [FLOWERS](./FLOWERS/) : Contains the dataset where I trained the 2 versions
-
 - [FlowersRetreival](./FlowersRetreival.py/) : Project Version using LSH , contains also Functions and classes used in this project 
     - [Streamlit App](./streamlit_app.py) : Deployment using Streamlit and functions in the [FlowersRetreival](./FlowersRetreival.py)
 
@@ -33,4 +31,6 @@ The project is implemented on 2 techniques which is LSH (Locality Sensitive Hash
 Both 2 techniques uses the Cosine Similarity as a metric of distance
 <br> 
  To use the GUI write ```streamlit run streamlit_app.py``` in your terminal
+ <br>
+ You can find the dataset where I extracted the features of it here (https://www.kaggle.com/datasets/aksha05/flower-image-dataset)
 
