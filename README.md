@@ -1,4 +1,5 @@
 # Content-Based-Image-Retreival - Using Aproximate Nearest Neighbours
+An Image Retreival System based on Aproximate Nearest Neighbours , where you query the image and the results are most similar or duplicated images
 ## Table of Contents 
 
 * [What is this project](https://github.com/Abdelrahman-ammar/Content-Based-Image-Retreival/blob/master/README.md#What-is-this-project)
